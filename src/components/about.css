@@ -1,0 +1,38 @@
+.bg {
+  filter: drop-shadow(15px 15px 25px #5db8f5);
+}
+.inner-text:hover {
+    filter: drop-shadow(2px 2px 2px #fff);
+}
+
+.inner-item:hover {
+  -webkit-animation: flip-vertical-fwd 0.5s
+    cubic-bezier(0.6, -0.28, 0.735, 0.045) 1;
+  animation: flip-vertical-fwd 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1;
+  box-shadow: 1px 2px 3px #fff;
+
+}
+.inner-item:hover .icon,
+.sub-title {
+  filter: drop-shadow(2px 3px 3px #fff);
+}
+@-webkit-keyframes flip-vertical-fwd {
+  0% {
+    -webkit-transform: translateZ(0) rotateY(0);
+    transform: translateZ(0) rotateY(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px) rotateY(180deg);
+    transform: translateZ(160px) rotateY(180deg);
+  }
+}
+@keyframes flip-vertical-fwd {
+  0% {
+    -webkit-transform: translateZ(0) rotateY(0);
+    transform: translateZ(0) rotateY(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px) rotateY(180deg);
+    transform: translateZ(160px) rotateY(180deg);
+  }
+}
