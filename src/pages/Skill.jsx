@@ -9,6 +9,9 @@ const Skill = () => {
       <h2 className=" w-full text-2xl uppercase text-center font-serif title tracking-widest">
         what i can do
       </h2>
+      <p className=" text-center text-[#ffffffbe] py-4">
+      I am confident that I can provide you with the high-quality front-end development services you need to achieve your goals. Please contact me today to discuss your project in more detail.
+      </p>
       <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-5 cursor-pointer">
         <div className=" main-container ">
           <div className=" the-card ">
@@ -17,11 +20,7 @@ const Skill = () => {
                 responsive web design
               </h2>
               <p className=" break-all tracking-wider text-[#ffffffa4] p-6">
-                Your website is the digital face of your business, and I'm here
-                to make sure it leaves a lasting impression on every visitor, no
-                matter the device they use. Contact me today to discuss your
-                responsive web design needs and let me help you take your online
-                presence to new heights.
+              I can ensure that your website looks great on all devices, from desktops to smartphones. I will use responsive design principles to create a website that adapts to different screen sizes and resolutions.
               </p>
             </div>
             <div className=" back rounded group">
@@ -37,13 +36,10 @@ const Skill = () => {
           <div className=" the-card ">
             <div className=" front rounded">
               <h2 className=" uppercase text-xl title font-semibold tracking-wider text-center my-2">
-                modern design layout
+              Custom Website Design
               </h2>
               <p className=" break-all tracking-wider text-[#ffffffa4] p-7">
-                In a rapidly evolving digital landscape, modern design is a
-                powerful tool to stand out from the crowd. Partner with me, and
-                together, we will create a digital presence that captivates,
-                engages, and leaves a lasting impact on your audience.
+              I can create a custom website that is tailored to your specific needs and goals. I will work with you to develop a design that is both visually appealing and user-friendly.
               </p>
             </div>
             <div className=" back rounded group">
@@ -59,13 +55,10 @@ const Skill = () => {
           <div className=" the-card ">
             <div className=" front rounded">
               <h2 className=" uppercase text-xl title font-semibold tracking-wider text-center my-2">
-                communication
+              Front-End Development
               </h2>
               <p className=" break-all tracking-wider text-[#ffffffa4] p-7">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                explicabo a soluta, numquam placeat odio suscipit consequatur
-                alias commodi perspiciatis eligendi natus possimus itaque earum
-                provident corrupti tenetur temporibus officia!
+              I can develop the front-end of your website using the latest HTML, CSS, and JavaScript technologies. I will write clean, maintainable, and well-documented code that is easy to update and extend.
               </p>
             </div>
             <div className=" back rounded group">
@@ -78,6 +71,7 @@ const Skill = () => {
           </div>
         </div>
       </div>
+      
       <Link to={"/about"}>
         <btn className=" group fixed left-0 top-1/2 flex justify-center items-center hover:bg-slate-300 w-10 h-8 rounded">
           <h2 className=" text-lg font-bold group-hover:text-orange-500">

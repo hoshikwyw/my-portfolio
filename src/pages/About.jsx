@@ -13,10 +13,11 @@ const About = () => {
         about me
       </h2>
       <p className=" text-center text-[#ffffffbe] py-4">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis,
-        alias. Reiciendis eaque dolorum dolor natus. Nostrum eaque nesciunt
-        minima, sunt, tenetur sed nihil at explicabo repudiandae est soluta?
-        Ipsa, doloribus?
+I am a front-end web developer with a passion for creating user-friendly and visually appealing interfaces. I have a deep understanding of HTML, CSS, and JavaScript, and I am always up-to-date on the latest trends and technologies in web development.
+
+I am a creative and detail-oriented individual who takes pride in my work. I am always looking for ways to improve the user experience, and I am not afraid to take on new challenges.
+
+In my spare time, I enjoy learning new things, playing video games, and spending time with my family and friends.
       </p>
       <div className=" flex mt-5 gap-3 ">
         {/* personal detail  */}
