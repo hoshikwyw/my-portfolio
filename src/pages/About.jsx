@@ -26,14 +26,14 @@ In my spare time, I enjoy learning new things, playing video games, and spending
             personal details
           </h2>
           <div className=" flex justify-center gap-8 ">
-            <div className=" flex flex-col gap-2 text-lg font-semibold capitalize text-[#ffffffbe]">
+            <div className=" flex flex-col gap-2 text-lg font-semibold capitalize text-[#ffffffbe] w-[30%]">
               <h2>Full Name</h2>
               <h2>age</h2>
               <h2>birthday</h2>
               <h2>email</h2>
               <h2>address</h2>
             </div>
-            <div className=" flex flex-col gap-2 text-lg font-semibold text-[#ffffffbe] italic tracking-wider ">
+            <div className=" flex flex-col gap-2 text-lg font-semibold text-[#ffffffbe] italic tracking-wider w-[70%]">
               <h2 className=" inner-text capitalize">khaing wut yi win</h2>
               <h2 className=" inner-text">21</h2>
               <h2 className=" inner-text">17.12.2001</h2>
