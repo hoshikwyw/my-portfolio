@@ -1,11 +1,17 @@
 import React from "react";
 import mypfp from "../assets/pfpImg.png";
 import pfbg from "../assets/pfbg.png";
-import {  HiArrowCircleRight } from "react-icons/hi";
+import { HiArrowCircleRight } from "react-icons/hi";
 import "../components/home.css";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  const handleDownload = () => {
+    const downloadLink = document.createElement("a");
+    downloadLink.href = "../../public/khaingwutyi.pdf";
+    downloadLink.download = "khaing-wut-yi-win.pdf";
+    downloadLink.click();
+  };
   return (
     <div className=" text-white flex justify-center items-center w-[90%] gap-[10%] mx-auto mb-14 relative">
       <div className=" relative flex justify-center w-[40%]  ">
@@ -33,12 +39,16 @@ const Home = () => {
           </div>
         </div>
         <div className=" w-full flex gap-5 justify-center">
-          <button className=" heartbeat item title font-bold flex items-center gap-5 px-3 py-1 bg-slate-500 rounded hover:text-orange-500">
+          <button
+            onClick={handleDownload}
+            className=" heartbeat item title font-bold flex items-center gap-5 px-3 py-1 bg-slate-500 rounded hover:text-orange-500">
             My Resume
           </button>
-          <button className=" heartbeat item title font-bold flex items-center gap-5 px-3 py-1 bg-slate-500 rounded hover:text-orange-500">
-            Contact Me
-          </button>
+          <Link to={"/contact"}>
+            <button className=" heartbeat item title font-bold flex items-center gap-5 px-3 py-1 bg-slate-500 rounded hover:text-orange-500">
+              Contact Me
+            </button>
+          </Link>
         </div>
       </div>
       <Link to={"/about"}>

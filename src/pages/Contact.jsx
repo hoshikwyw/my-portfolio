@@ -1,12 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiFillMail } from "react-icons/ai";
 import { BiSolidPhoneCall, BiSolidSend } from "react-icons/bi";
 import pfp from "../assets/kwyw-removebg.png";
 import { HiArrowCircleRight, HiArrowCircleLeft } from "react-icons/hi";
 import { Link } from "react-router-dom";
-
+import axios from 'axios';
 
 const Contact = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const data = { name, email, message };
+
+    try {
+      await axios.post('/sendEmail', data);
+      alert('Email sent successfully!');
+    } catch (error) {
+      alert('An error occurred while sending the email.');
+    }
+  };
+  const handleEmailClick = () => {
+    const recipientEmail = "khaingwutyiwin1712@gmail.com";
+    const subject = "Your subject here";
+    const body = "Your message here";
+
+    const gmailComposeLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+      recipientEmail
+    )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(gmailComposeLink);
+  };
+  const handle2EmailClick = () => {
+    const recipientEmail = "orocupid1712@gmail.com";
+    s;
+    const subject = "Your subject here";
+    const body = "Your message here";
+
+    const gmailComposeLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+      recipientEmail
+    )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(gmailComposeLink);
+  };
+  const handlePhoneClick = () => {
+    const phoneNumber = "+959795847089";
+    const telLink = `tel:${phoneNumber}`;
+    window.open(telLink, "_self");
+  };
+  const handle2PhoneClick = () => {
+    const phoneNumber = "+959971030915";
+    const telLink = `tel:${phoneNumber}`;
+    window.open(telLink, "_self");
+  };
   return (
     <div className=" text-white w-[90%] gap-[10%] mx-auto mt-4  mb-14">
       {/* <h2 className=" ps-10 mb-8 uppercase font-bold font-serif tracking-wider text-xl">
@@ -28,8 +74,18 @@ const Contact = () => {
             Call Me
           </h2>
           <div className=" mt-2 text-sm text-[#ffffffcc] flex flex-col gap-2">
-            <h2 className=" hover:text-orange-600">+959-795-847-089</h2>
-            <h2 className=" hover:text-orange-600">+959-971-030-915</h2>
+            <a
+              href="#"
+              onClick={handlePhoneClick}
+              className=" hover:text-orange-600">
+              +959-795-847-089
+            </a>
+            <a
+              href="#"
+              onClick={handle2PhoneClick}
+              className=" hover:text-orange-600">
+              +959-971-030-915
+            </a>
           </div>
         </div>
         {/* email  */}
@@ -41,10 +97,20 @@ const Contact = () => {
             Send Mail
           </h2>
           <div className=" mt-2 text-sm text-[#ffffffcc] flex flex-col gap-2">
-            <h2 className=" hover:text-orange-600">
+            <a
+              href="#"
+              target="_blank"
+              onClick={handleEmailClick}
+              className=" hover:text-orange-600">
               khaingwutyiwin1712@gmail.com
-            </h2>
-            <h2 className=" hover:text-orange-600">orocupid1712@gmail.com</h2>
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              onClick={handle2EmailClick}
+              className=" hover:text-orange-600">
+              orocupid1712@gmail.com
+            </a>
           </div>
         </div>
       </div>
@@ -63,21 +129,30 @@ const Contact = () => {
         </div>
         {/* form  */}
         <div className=" w-[50%] h-full">
-          <form className=" flex flex-col gap-3">
+          <form className=" flex flex-col gap-3" onSubmit={handleSubmit}>
             <input
               placeholder="Your Name"
               type="text"
+              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className=" text-white w-full rounded outline-none py-1 ps-5 bg-transparent border border-white"
             />
             <input
               placeholder="E-mail"
-              type="text"
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className=" text-white w-full rounded outline-none py-1 ps-5 bg-transparent border border-white"
             />
             <textarea
+              id="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               placeholder="Message"
               className=" resize-none text-white rounded outline-none py-1 ps-5 h-28 bg-transparent border border-white"></textarea>
-            <button className=" flex items-center gap-3 bg-slate-500 w-fit px-5 py-1 rounded font-semibold hover:bg-orange-700 ">
+            <button  type="submit" className=" flex items-center gap-3 bg-slate-500 w-fit px-5 py-1 rounded font-semibold hover:bg-orange-700 ">
               Send
               <span className="">
                 <BiSolidSend />

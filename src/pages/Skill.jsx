@@ -5,11 +5,11 @@ import "../components/skill.css";
 
 const Skill = () => {
   return (
-    <div className=" text-white flex flex-col mt-3 w-[90%] mx-auto mb-14 relative">
+    <div className=" text-white flex flex-col mt-3 w-[90%] mx-auto mb-14 relative ">
       <h2 className=" w-full text-2xl uppercase text-center font-serif title tracking-widest">
         what i can do
       </h2>
-      <div className=" grid grid-cols-3 gap-10 mt-5 cursor-pointer">
+      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-5 cursor-pointer">
         <div className=" main-container ">
           <div className=" the-card ">
             <div className=" front rounded">
