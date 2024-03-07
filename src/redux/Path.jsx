@@ -10,7 +10,7 @@ import Skill from "../pages/Skill";
 
 const Path = () => {
   return (
-    <div className=" h-screen bg-white bg-opacity-10 w-[90%] mx-auto pb-8 backdrop-filter backdrop-blur-md rounded shadow relative ">
+    <div className=" bg-white bg-opacity-10 w-[90%] h-[80%] mx-auto backdrop-filter backdrop-blur-md rounded shadow relative ">
       <div className="">
         <BrowserRouter>
           <Navbar />
