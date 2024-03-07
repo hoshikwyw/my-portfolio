@@ -19,8 +19,8 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 
 const Projects = () => {
   return (
-    <div className=" text-white flex flex-col mt-3 w-[90%] mx-auto mb-14 relative">
-      <h2 className=" w-full text-2xl uppercase text-center font-serif title tracking-widest">
+    <div className=" text-white flex flex-col mt-3 w-[90%] mx-auto relative">
+      <h2 className=" w-full text-2xl uppercase text-center font-serif title tracking-widest mb-4">
         my projects
       </h2>
       <Swiper
